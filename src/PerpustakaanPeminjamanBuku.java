@@ -5,7 +5,7 @@ public class PerpustakaanPeminjamanBuku {
     public int JumlahBukuDipinjam;
 
     //method
-    public void TampilkanInfoDataPeminjam(){
+    public void TampilkanInfoDataPeminjaman(){
         System.out.println("=====================");
         System.out.println("Nama Peminjam : " +NamaPeminjam);
         System.out.println("Judul Buku : " +JudulBukuDipinjam);
