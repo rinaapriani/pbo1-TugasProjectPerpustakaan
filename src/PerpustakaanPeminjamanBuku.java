@@ -1,4 +1,4 @@
-public class PerpustakaanPeminjamanBuku {
+public class PerpustakaanPeminjamanBuku extends Buku{
     //atribut
     public String NamaPeminjam;
     public String JudulBukuDipinjam;
@@ -12,7 +12,7 @@ public class PerpustakaanPeminjamanBuku {
         System.out.println("Jumlah Buku Dipinjam : " +JumlahBukuDipinjam);
     }
 
-    public boolean create(){
+    public boolean create(String NamaPeminjam, String JudulBukuDipinjam, int JumlahBukuDipinjam){
         String insertSQL = "INSERT INTO perpustakaanpeminjamanbuku VALUES ('"+NamaPeminjam+"','"+JudulBukuDipinjam+"','"+JumlahBukuDipinjam+"')";
         System.out.println(insertSQL);
         return false;
