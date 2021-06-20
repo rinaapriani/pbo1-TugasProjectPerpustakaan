@@ -11,6 +11,7 @@ public class Buku {
     public int jumlah;
     public String deskripsi;
 
+
     //method
     public void tampilkanBuku(){
         System.out.println("=======================");
@@ -70,14 +71,11 @@ public class Buku {
         this.jumlah = jumlah;
     }
 
-    public Buku(int id_buku, String judul_buku, String isbn, String pengarang, int halaman, String penerbit, int jumlah, String deskripsi) {
+    public Buku(int id_buku, String judul_buku, String isbn, String penerbit, int jumlah) {
         this.id_buku = id_buku;
         this.judul_buku = judul_buku;
         this.isbn = isbn;
-        this.pengarang = pengarang;
-        this.halaman = halaman;
         this.penerbit = penerbit;
         this.jumlah = jumlah;
-        this.deskripsi = deskripsi;
     }
 }
