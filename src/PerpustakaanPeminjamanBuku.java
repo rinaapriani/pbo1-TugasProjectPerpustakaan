@@ -17,4 +17,30 @@ public class PerpustakaanPeminjamanBuku extends Buku{
         System.out.println(insertSQL);
         return false;
     }
+
+    //getter & setter seluruh atribut
+
+    public String getNamaPeminjam() {
+        return NamaPeminjam;
+    }
+
+    public void setNamaPeminjam(String namaPeminjam) {
+        NamaPeminjam = namaPeminjam;
+    }
+
+    public String getJudulBukuDipinjam() {
+        return JudulBukuDipinjam;
+    }
+
+    public void setJudulBukuDipinjam(String judulBukuDipinjam) {
+        JudulBukuDipinjam = judulBukuDipinjam;
+    }
+
+    public int getJumlahBukuDipinjam() {
+        return JumlahBukuDipinjam;
+    }
+
+    public void setJumlahBukuDipinjam(int jumlahBukuDipinjam) {
+        JumlahBukuDipinjam = jumlahBukuDipinjam;
+    }
 }
