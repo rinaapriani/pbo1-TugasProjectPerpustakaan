@@ -57,6 +57,10 @@ public class BukuAksi {
         Buku B6 = new Buku(8, "Pemrograman Visual", "Vsl2019", "PT.Intan", 20);
         B6.tampilkanBuku();
 
+        //object ovveride
+        PerpustakaanPeminjamanBuku BukuOver = new PerpustakaanPeminjamanBuku();
+        BukuOver.create();
+        BukuOver.create("Pemrograman Pascal", "Mempelajari Bahasa Pemrograman Pascal");
 
     }
 }

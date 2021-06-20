@@ -43,4 +43,14 @@ public class PerpustakaanPeminjamanBuku extends Buku{
     public void setJumlahBukuDipinjam(int jumlahBukuDipinjam) {
         JumlahBukuDipinjam = jumlahBukuDipinjam;
     }
+
+    //ovveride
+
+    @Override
+    public boolean create() { return super.create(); }
+
+    @Override
+    public boolean create(String judul_buku, String deskripsi) {
+        return super.create(judul_buku, deskripsi);
+    }
 }
