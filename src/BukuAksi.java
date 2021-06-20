@@ -29,17 +29,19 @@ public class BukuAksi {
         novel.judul_buku = "If You Know Who";
         novel.isbn = "IYKW2018";
         novel.jumlah = 55;
-
         novel.tampilBuku();
 
         PerpustakaanPeminjamanBuku ppb = new PerpustakaanPeminjamanBuku();
-        ppb.id_buku = 02;
-        ppb.tampilkanBuku();
+        ppb.id_buku = 03;
         ppb.NamaPeminjam = "Elsa";
-        ppb.JudulBukuDipinjam = "If You Know Who";
-        ppb.JumlahBukuDipinjam = 10;
-        ppb.TampilkanInfoDataPeminjaman();
+        ppb.JudulBukuDipinjam = "Diary Salsa";
+        ppb.JumlahBukuDipinjam = 5;
 
-        ppb.create("Lita Sari", "HTML Dasar", 5);
+        ppb.TampilkanInfoDataPeminjaman();
+        ppb.create("Yayu", "Dakwah Islam", 1);
+
+
+
+
     }
 }
