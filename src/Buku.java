@@ -78,4 +78,70 @@ public class Buku {
         this.penerbit = penerbit;
         this.jumlah = jumlah;
     }
+
+    //getter & setter seluruh atribut
+
+    public int getId_buku() {
+        return id_buku;
+    }
+
+    public void setId_buku(int id_buku) {
+        this.id_buku = id_buku;
+    }
+
+    public String getJudul_buku() {
+        return judul_buku;
+    }
+
+    public void setJudul_buku(String judul_buku) {
+        this.judul_buku = judul_buku;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getPengarang() {
+        return pengarang;
+    }
+
+    public void setPengarang(String pengarang) {
+        this.pengarang = pengarang;
+    }
+
+    public int getHalaman() {
+        return halaman;
+    }
+
+    public void setHalaman(int halaman) {
+        this.halaman = halaman;
+    }
+
+    public String getPenerbit() {
+        return penerbit;
+    }
+
+    public void setPenerbit(String penerbit) {
+        this.penerbit = penerbit;
+    }
+
+    public int getJumlah() {
+        return jumlah;
+    }
+
+    public void setJumlah(int jumlah) {
+        this.jumlah = jumlah;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
+    }
 }
