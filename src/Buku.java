@@ -1,3 +1,5 @@
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class Buku {
 
@@ -13,7 +15,7 @@ public class Buku {
 
 
     //method
-    public void tampilkanBuku(){
+    public void tampilkanBukuAll(){
         System.out.println("=======================");
         System.out.println("Id Buku : " + id_buku);
         System.out.println("Judul Buku : " + judul_buku);
@@ -33,35 +35,27 @@ public class Buku {
         System.out.println("Jumlah : " +jumlah);
     }
 
-    public boolean create()
+    public void tampilKetersedianBuku(int jumlah, String judul_buku)
     {
-        String insertSQL = "INSERT INTO buku VALUES ('"+id_buku+"','"+judul_buku+"','"+isbn+"','"+pengarang+"','"+halaman+"','"+penerbit+"','"+jumlah+"','"+deskripsi+"')";
-        System.out.println(insertSQL);
-        boolean berhasil = true;
-        if(berhasil){
-            return true;
-        }else {
-            return false;
-        }
+        System.out.println("Jumlah Buku : " +jumlah);
+        System.out.println("Judul Buku : " +judul_buku);
     }
 
-    public boolean create(String judul_buku, String deskripsi) {
-        String insertSQL = "INSERT INTO buku VALUES ('"+judul_buku+"','"+deskripsi+"' )";
-        System.out.println(insertSQL);
-        return false;
+    public void judulBukuPengarang(String judul_buku, String pengarang)
+    {
+        System.out.println("Judul Buku : " +judul_buku);
+        System.out.println("Pengarang : " +pengarang);
     }
+
 
     //constructor
     public Buku() {
         System.out.println("Ini dari constructor");
-        id_buku = 4;
-        judul_buku = "Matematika Diskrit";
-        isbn = "MatDis2017";
-        pengarang = "Malik";
-        halaman = 260;
-        penerbit = "Cakrawala";
-        jumlah = 1;
-        deskripsi = "Materi Matematika Diskrit";
+        judul_buku = "Maaf Data Judul Buku Kosong, Mohon Diisi";
+        isbn = "Maaf Data ISBN Kosong, Mohon Diisi";
+        pengarang = "Maaf Data Pengarang Kosong, Mohon Diisi";
+        penerbit = "Maaf Data Penerbit Kosong, Mohon Diisi";
+        deskripsi = "Maaf Data Deskripsi Kosong, Mohon Diisi";
     }
 
     public Buku(int id_buku, String judul_buku, String isbn, int jumlah) {

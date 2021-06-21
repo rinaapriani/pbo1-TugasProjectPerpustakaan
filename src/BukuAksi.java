@@ -12,17 +12,8 @@ public class BukuAksi {
         pelajaran.jumlah = 10;
         pelajaran.deskripsi = "Pemrograman Berorientasi Objek, Java";
 
-        pelajaran.tampilkanBuku();
-        pelajaran.create();
-        pelajaran.create("HTML Dasar", "Belajar Bahasa Program HTML Dasar");
-
-        pelajaran.tampilkanBuku();
-        if (pelajaran.create()){
-            System.out.println("Data berhasil disimpan");
-        }else {
-            System.out.println("Data gagal disimpan");
-        }
-
+        pelajaran.tampilkanBukuAll();
+        System.out.println("==================================================");
 
         Buku novel = new Buku();
         novel.id_buku = 02;
@@ -30,6 +21,18 @@ public class BukuAksi {
         novel.isbn = "IYKW2018";
         novel.jumlah = 55;
         novel.tampilBuku();
+        System.out.println("==================================================");
+
+
+        Buku buku = new Buku();
+        System.out.println("Tampil Ketersedian Buku");
+        buku.tampilKetersedianBuku(10, "Pemrograman Berorientasi Objek");
+        System.out.println("==================================================");
+
+        Buku buku2 = new Buku();
+        System.out.println("Tampil Judul Buku & Pengarang");
+        buku2.judulBukuPengarang("Sistem Operasi", "Sutoyo");
+        System.out.println("==================================================");
 
         //pembuatan object class2
         PerpustakaanPeminjamanBuku ppb = new PerpustakaanPeminjamanBuku();
@@ -37,13 +40,22 @@ public class BukuAksi {
         ppb.NamaPeminjam = "Elsa";
         ppb.JudulBukuDipinjam = "Diary Salsa";
         ppb.JumlahBukuDipinjam = 5;
-
         ppb.TampilkanInfoDataPeminjaman();
-        ppb.create("Yayu", "Dakwah Islam", 1);
+
+
+        PerpustakaanPeminjamanBuku ppb2 = new PerpustakaanPeminjamanBuku();
+        ppb2.id_buku = 12;
+        ppb2.NamaPeminjam = "Rina";
+        ppb2.JudulBukuDipinjam = "Algoritma";
+        ppb2.JumlahBukuDipinjam = 1;
+
+        System.out.println("Tampil Daftar Nama Peminjam");
+        ppb.DaftarNamaPeminjam("Elsa");
+        ppb2.DaftarNamaPeminjam("Rina");
 
         //object constructor class1
         Buku B1 = new Buku();
-        B1.tampilkanBuku();
+        B1.tampilkanBukuAll();
         Buku B2 = new Buku();
         B2.tampilBuku();
 
@@ -53,14 +65,17 @@ public class BukuAksi {
         B4.tampilBuku();
 
         Buku B5 = new Buku(7, "Ilmu Sosial Budaya", "ISBD2017", "Permatasari", 10);
-        B5.tampilkanBuku();
+        B5.tampilkanBukuAll();
         Buku B6 = new Buku(8, "Pemrograman Visual", "Vsl2019", "PT.Intan", 20);
-        B6.tampilkanBuku();
+        B6.tampilkanBukuAll();
 
         //object ovveride
         PerpustakaanPeminjamanBuku BukuOver = new PerpustakaanPeminjamanBuku();
-        BukuOver.create();
-        BukuOver.create("Pemrograman Pascal", "Mempelajari Bahasa Pemrograman Pascal");
+        BukuOver.tampilkanBukuAll();
+        System.out.println("Override Tampil Ketersediaan Buku");
+        BukuOver.tampilKetersedianBuku(20, "Pemrograman Visual");
+
+
 
     }
 }

@@ -12,10 +12,9 @@ public class PerpustakaanPeminjamanBuku extends Buku{
         System.out.println("Jumlah Buku Dipinjam : " +JumlahBukuDipinjam);
     }
 
-    public boolean create(String NamaPeminjam, String JudulBukuDipinjam, int JumlahBukuDipinjam){
-        String insertSQL = "INSERT INTO perpustakaanpeminjamanbuku VALUES ('"+NamaPeminjam+"','"+JudulBukuDipinjam+"','"+JumlahBukuDipinjam+"')";
-        System.out.println(insertSQL);
-        return false;
+    public void DaftarNamaPeminjam(String NamaPeminjam){
+        System.out.println("========================");
+        System.out.println("Nama Peminjam : " +NamaPeminjam);
     }
 
     //getter & setter seluruh atribut
@@ -46,11 +45,14 @@ public class PerpustakaanPeminjamanBuku extends Buku{
 
     //ovveride
 
-    @Override
-    public boolean create() { return super.create(); }
 
     @Override
-    public boolean create(String judul_buku, String deskripsi) {
-        return super.create(judul_buku, deskripsi);
+    public void tampilkanBukuAll() {
+        super.tampilkanBukuAll();
+    }
+
+    @Override
+    public void tampilKetersedianBuku(int jumlah, String judul_buku) {
+        super.tampilKetersedianBuku(jumlah, judul_buku);
     }
 }
